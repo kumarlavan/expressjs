@@ -38,5 +38,7 @@ app.get("/sql-data",async(req,res)=>{
     res.status(500).json({message:"error"})
    }
 })
-
+app.listen(process.env.PORT||5000,()=>{
+    console.log("server running")
+})
 module.exports=app
